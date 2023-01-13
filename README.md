@@ -20,6 +20,8 @@ Please refer to [Monodepth2](https://github.com/nianticlabs/monodepth2) to preap
 
 
 ## Results on KITTI
+You can download the trained models using the links below.  
+
 |     --model     | Params | ImageNet Pretrained | Input size |  Abs Rel  |   Sq Rel  |    RMSE   |  RMSE log | delta < 1.25 | delta < 1.25^2 | delta < 1.25^3 |
 |:---------------:|:------:|:-------------------:|:----------:|:---------:|:---------:|:---------:|:---------:|:------------:|:--------------:|:--------------:|
 |  [**lite-mono**](https://surfdrive.surf.nl/files/index.php/s/CUjiK221EFLyXDY)  |  3.1M  |         yes         |   640x192  | **0.107** | **0.765** | **4.561** | **0.183** |   **0.886**  |    **0.963**   |    **0.983**   |
@@ -36,4 +38,4 @@ You can evaluate on KITTI using the following command.
 
  
  
-The training code will released soon.
+The training code will be released soon.

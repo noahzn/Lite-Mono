@@ -1,9 +1,3 @@
-# Copyright Niantic 2019. Patent Pending. All rights reserved.
-#
-# This software is licensed under the terms of the Monodepth2 licence
-# which allows for non-commercial use only, the full terms of which are made
-# available in the LICENSE file.
-
 from __future__ import absolute_import, division, print_function
 
 import os
@@ -18,8 +12,6 @@ from torchvision import transforms
 
 
 def pil_loader(path):
-    # open path as file to avoid ResourceWarning
-    # (https://github.com/python-pillow/Pillow/issues/835)
     with open(path, 'rb') as f:
         with Image.open(f) as img:
             return img.convert('RGB')

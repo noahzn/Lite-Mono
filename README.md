@@ -12,6 +12,9 @@ If you find our work useful please cite our paper.
 >}
 
 
+## Test on a single image
+`python test_simple.py --load_weights_folder path/to/your/weights/folder --image_path path/to/your/test/image`
+
 
 
 ## KITTI data

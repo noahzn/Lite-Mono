@@ -33,8 +33,16 @@ class LiteMonoOptions:
         self.parser.add_argument("--model",
                                  type=str,
                                  help="which model to load",
-                                 choices=["lite-mono", "lite-mono-small", "lite-mono-tiny"],
+                                 choices=["lite-mono", "lite-mono-small", "lite-mono-tiny", "lite-mono-8m"],
                                  default="lite-mono")
+        self.parser.add_argument("--weight_decay",
+                                 type=float,
+                                 help="weight decay in AdamW",
+                                 default=1e-2)
+        self.parser.add_argument("--drop_path",
+                                 type=float,
+                                 help="drop path rate",
+                                 default=0.2)
         self.parser.add_argument("--num_layers",
                                  type=int,
                                  help="number of resnet layers",
@@ -91,12 +99,12 @@ class LiteMonoOptions:
         self.parser.add_argument("--batch_size",
                                  type=int,
                                  help="batch size",
-                                 default=16)
+                                 default=12)
         self.parser.add_argument("--lr",
                                  nargs="+",
                                  type=float,
                                  help="frames to load",
-                                 default=[0.0005, 5e-6, 36, 0.0001, 1e-5, 36])
+                                 default=[0.0001, 5e-6, 16, 0.0001, 1e-5, 16])
         self.parser.add_argument("--learning_rate",
                                  type=float,
                                  help="learning rate",

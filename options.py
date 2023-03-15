@@ -99,7 +99,7 @@ class LiteMonoOptions:
         self.parser.add_argument("--batch_size",
                                  type=int,
                                  help="batch size",
-                                 default=12)
+                                 default=16)
         self.parser.add_argument("--lr",
                                  nargs="+",
                                  type=float,

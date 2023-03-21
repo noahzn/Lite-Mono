@@ -28,7 +28,7 @@
 - [Training](#training)
   - [Dependency Installation](#dependency-installation)
   - [Start Training](#start-training)
-  - [Tensorboard Visualization (optional)](#tensorboard-visualization-(optional))
+  - [Tensorboard Visualization](#tensorboard-visualization)
 - [Citation](#citation)
 
 
@@ -76,7 +76,7 @@ Please refer to [Monodepth2](https://github.com/nianticlabs/monodepth2) to prepa
 #### start training
     python train.py --data_path path/to/your/data --model_name mytrain --batch_size 12
     
-#### tensorboard visualization (optional)
+#### tensorboard visualization
     tensorboard --log_dir ./tmp/mytrain
 
 ## Citation

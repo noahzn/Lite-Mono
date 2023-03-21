@@ -24,7 +24,7 @@ class LiteMonoOptions:
         self.parser.add_argument("--model_name",
                                  type=str,
                                  help="the name of the folder to save the model in",
-                                 default="mdp")
+                                 default="lite-mono")
         self.parser.add_argument("--split",
                                  type=str,
                                  help="which training split to use",
@@ -103,16 +103,11 @@ class LiteMonoOptions:
         self.parser.add_argument("--lr",
                                  nargs="+",
                                  type=float,
-                                 help="frames to load",
-                                 default=[0.0001, 5e-6, 16, 0.0001, 1e-5, 16])
-        self.parser.add_argument("--learning_rate",
-                                 type=float,
-                                 help="learning rate",
-                                 default=5e-4)
-        self.parser.add_argument("--learning_rate_pose",
-                                 type=float,
-                                 help="learning rate of the pose net",
-                                 default=1e-4)
+                                 help="learning rates of DepthNet and PoseNet. "
+                                      "Initial learning rate, "
+                                      "minimum learning rate, "
+                                      "First cycle step size.",
+                                 default=[0.0001, 5e-6, 31, 0.0001, 1e-5, 31])
         self.parser.add_argument("--num_epochs",
                                  type=int,
                                  help="number of epochs",

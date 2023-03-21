@@ -26,6 +26,9 @@
 - [Single Image Test](#single-image-test)
 - [Evaluation](#evaluation)
 - [Training](#training)
+  - [Dependency Installation](#dependency-installation)
+  - [Start Training](#start-training)
+  - [Tensorboard Visualization (optional)](#tensorboard-visualization-(optional))
 - [Citation](#citation)
 
 
@@ -67,13 +70,20 @@ Please refer to [Monodepth2](https://github.com/nianticlabs/monodepth2) to prepa
 
 
 ## Training
-The training code will be released soon.
+#### dependency installation 
+    pip install 'git+https://github.com/saadnaeem-dev/pytorch-linear-warmup-cosine-annealing-warm-restarts-weight-decay'
+    
+#### start training
+    python train.py --data_path path/to/your/data --model_name mytrain --batch_size 12
+    
+#### tensorboard visualization (optional)
+    tensorboard --log_dir ./tmp/mytrain
 
 ## Citation
 
-    @inproceedings{zhang2022lite,  
-      title={Lite-Mono: A Lightweight CNN and Transformer Architecture for Self-Supervised Monocular Depth Estimation},  
-      author={Zhang, Ning and Nex, Francesco and Vosselman, George and Kerle, Norman},  
-      booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
-      year={2023}  
-      }
+    @article{zhang2022lite,
+    title={Lite-Mono: A Lightweight CNN and Transformer Architecture for Self-Supervised Monocular Depth Estimation},
+    author={Zhang, Ning and Nex, Francesco and Vosselman, George and Kerle, Norman},
+    journal={arXiv preprint arXiv:2211.13202},
+    year={2022}
+    }

@@ -47,7 +47,6 @@ class DepthDecoder(nn.Module):
 
     def forward(self, input_features):
         self.outputs = {}
-        features = []
         x = input_features[-1]
         for i in range(2, -1, -1):
             x = self.convs[("upconv", i, 0)](x)
@@ -60,9 +59,7 @@ class DepthDecoder(nn.Module):
 
             if i in self.scales:
                 f = upsample(self.convs[("dispconv", i)](x), mode='bilinear')
-                features.append(f)
                 self.outputs[("disp", i)] = self.sigmoid(f)
 
-        # return self.outputs
-        return self.outputs, features
+        return self.outputs
 

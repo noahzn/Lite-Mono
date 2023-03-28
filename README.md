@@ -22,6 +22,7 @@
 - [Results](#results)
   - [KITTI](#kitti) 
   - [Speed Evaluation](#speed-evaluation)
+  - [Robustness](#robustness)
 - [Data Preparation](#data-preparation)
 - [Single Image Test](#single-image-test)
 - [Evaluation](#evaluation)
@@ -56,6 +57,10 @@ You can download the trained models using the links below.
 <img src="./img/speed.png" width="100%" alt="speed evaluation" align=center />
 
 
+### Robustness
+<img src="./img/robustness.png" width="100%" alt="robustness" align=center />
+
+The [RoboDepth Challenge Team](https://github.com/ldkong1205/RoboDepth) is evaluating the robustness of different depth estimation algorithms. Lite-Mono has achieved the best robustness to date.
 
 ## Data Preparation
 Please refer to [Monodepth2](https://github.com/nianticlabs/monodepth2) to prepare your KITTI data. 

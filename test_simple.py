@@ -42,7 +42,8 @@ def parse_args():
                         choices=[
                             "lite-mono",
                             "lite-mono-small",
-                            "lite-mono-tiny"])
+                            "lite-mono-tiny",
+                            "lite-mono-8m"])
 
     parser.add_argument('--ext', type=str,
                         help='image extension to search for in folder', default="jpg")

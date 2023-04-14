@@ -128,7 +128,7 @@ def evaluate(opt):
 
                 flops, params, flops_e, params_e, flops_d, params_d = profile_once(encoder, depth_decoder, input_color)
                 t1 = time_sync()
-                output, _ = depth_decoder(encoder(input_color))
+                output = depth_decoder(encoder(input_color))
                 t2 = time_sync()
 
                 pred_disp, _ = disp_to_depth(output[("disp", 0)], opt.min_depth, opt.max_depth)

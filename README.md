@@ -79,7 +79,7 @@ Please refer to [Monodepth2](https://github.com/nianticlabs/monodepth2) to prepa
     pip install 'git+https://github.com/saadnaeem-dev/pytorch-linear-warmup-cosine-annealing-warm-restarts-weight-decay'
     
 #### start training
-    python train.py --data_path path/to/your/data --model_name mytrain --batch_size 12
+    python train.py --data_path path/to/your/data --model_name mytrain --batch_size 12 --mypretrain path/to/your/pretrained/weights
     
 #### tensorboard visualization
     tensorboard --log_dir ./tmp/mytrain

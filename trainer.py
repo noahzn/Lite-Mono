@@ -56,7 +56,8 @@ class Trainer:
             self.opt.frame_ids.append("s")
 
         self.models["encoder"] = networks.LiteMono(model=self.opt.model,
-                                                   drop_path_rate=self.opt.drop_path)
+                                                   drop_path_rate=self.opt.drop_path,
+                                                   width=self.opt.width, height=self.opt.height)
 
         self.models["encoder"].to(self.device)
         self.parameters_to_train += list(self.models["encoder"].parameters())

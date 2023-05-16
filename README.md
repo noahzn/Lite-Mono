@@ -86,9 +86,11 @@ Please refer to [Monodepth2](https://github.com/nianticlabs/monodepth2) to prepa
 
 ## Citation
 
-    @article{zhang2022lite,
-    title={Lite-Mono: A Lightweight CNN and Transformer Architecture for Self-Supervised Monocular Depth Estimation},
-    author={Zhang, Ning and Nex, Francesco and Vosselman, George and Kerle, Norman},
-    journal={arXiv preprint arXiv:2211.13202},
-    year={2022}
+    @InProceedings{Zhang_2023_CVPR,
+    author    = {Zhang, Ning and Nex, Francesco and Vosselman, George and Kerle, Norman},
+    title     = {Lite-Mono: A Lightweight CNN and Transformer Architecture for Self-Supervised Monocular Depth Estimation},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+    month     = {June},
+    year      = {2023},
+    pages     = {18537-18546}
     }

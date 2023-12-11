@@ -1,0 +1,5 @@
+timm==0.4.12
+tensorboardX==2.2
+six==1.16.0
+fvcore==0.1.5.post20220414
+protobuf==3.20.*

@@ -25,11 +25,15 @@
   - [Robustness](#robustness)
 - [Data Preparation](#data-preparation)
 - [Single Image Test](#single-image-test)
+  - [Preparing Trained Model](#preparing-trained-model)
+  - [Start Testing](#start-testing)
 - [Evaluation](#evaluation)
 - [Training](#training)
   - [Dependency Installation](#dependency-installation)
+  - [Preparing Pre-trained Weights](#preparing-pre-trained-weights)
   - [Start Training](#start-training)
   - [Tensorboard Visualization](#tensorboard-visualization)
+- [Make Your Own Pre-training Weights On ImageNet](#make-your-own-pre-training-weights-on-imagenet)
 - [Citation](#citation)
 
 
@@ -63,12 +67,16 @@ You can download the trained models using the links below.
 The [RoboDepth Challenge Team](https://github.com/ldkong1205/RoboDepth) is evaluating the robustness of different depth estimation algorithms. Lite-Mono has achieved the best robustness to date.
 
 ## Data Preparation
-Please refer to [Monodepth2](https://github.com/nianticlabs/monodepth2) to prepare your KITTI data. 
-
+Please refer to [Monodepth2](https://github.com/nianticlabs/monodepth2) to prepare your KITTI data.
 
 ## Single Image Test
-    python test_simple.py --load_weights_folder path/to/your/weights/folder --image_path path/to/your/test/image
+#### preparing trained model
+From this [table](#kitti) you can download trained models (depth encoder and depth decoder).
 
+Click on the links in the '--model' column to download a trained model.
+
+#### start testing
+    python test_simple.py --load_weights_folder path/to/your/weights/folder --image_path path/to/your/test/image
 
 ## Evaluation
     python evaluate_depth.py --load_weights_folder path/to/your/weights/folder --data_path path/to/kitti_data/ --model lite-mono
@@ -77,12 +85,21 @@ Please refer to [Monodepth2](https://github.com/nianticlabs/monodepth2) to prepa
 ## Training
 #### dependency installation 
     pip install 'git+https://github.com/saadnaeem-dev/pytorch-linear-warmup-cosine-annealing-warm-restarts-weight-decay'
-    
+
+#### preparing pre-trained weights
+From this [table](#kitti) you can also download weights of backbone (depth encoder) pre-trained on ImageNet.
+
+Click 'yes' on a row to download specific pre-trained weights. The weights are agnostic to image resolutions.
+
 #### start training
     python train.py --data_path path/to/your/data --model_name mytrain --num_epochs 30 --batch_size 12 --mypretrain path/to/your/pretrained/weights  --lr 0.0001 5e-6 31 0.0001 1e-5 31
     
 #### tensorboard visualization
     tensorboard --log_dir ./tmp/mytrain
+
+## Make Your Own Pre-training Weights On ImageNet
+Since a lot of people are interested in training their own backbone on ImageNet, I also upload my pre-training [scripts](lite-mono-pretrain-code) to this repo. 
+    
 
 ## Citation
 
